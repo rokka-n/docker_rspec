@@ -28,3 +28,5 @@ docker run --rm -ti \
 ```
 
 And then run tests with ```rspec``` instead of ```bundler install```  
+
+[![asciicast](https://asciinema.org/a/3m9u48pb7tu9gvtzq8lifg2ih.png)](https://asciinema.org/a/3m9u48pb7tu9gvtzq8lifg2ih)
