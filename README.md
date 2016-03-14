@@ -4,9 +4,9 @@
 I saw this post about testing Dockerfile builds with serverspec:
 https://robots.thoughtbot.com/tdd-your-dockerfiles-with-rspec-and-serverspec
 
-I wondered if it wass possible to do the same testing using docker itself (docker-in-docker).
+I wondered if it was possible to do the same testing using docker itself (docker-in-docker).
 
-So you won't depend on any gems or packages isntalled locally.
+So you won't depend on any gems or packages installed locally.
 
 With a little bit of hacking - sure its possible!
 
