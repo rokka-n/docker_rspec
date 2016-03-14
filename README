@@ -1,15 +1,18 @@
-Test Dockerfile with rspec
-==========================
+
+# Test Dockerfile with rspec
 
 I saw this post about testing Dockerfile builds with serverspec:
 https://robots.thoughtbot.com/tdd-your-dockerfiles-with-rspec-and-serverspec
 
-I wondered if it's possible to do the same testing using docker itself (docker-in-docker).
+I wondered if it wass possible to do the same testing using docker itself (docker-in-docker).
+
+So you won't depend on any gems or packages isntalled locally.
 
 With a little bit of hacking - sure its possible!
 
-Install whatever ruby wants:
+Install whatever ruby wants to run rspec/serverspec:
 
+```
 docker run --rm -ti \
        --net host  \
        --name ruby \
@@ -22,5 +25,6 @@ docker run --rm -ti \
        -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies \
        -w /usr/src/app ruby:2.1  \
        bundler install
+```
 
-And then run tests with rspec instead of 'bundler install' 
+And then run tests with ```rspec``` instead of ```bundler install```  
