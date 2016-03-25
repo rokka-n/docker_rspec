@@ -12,17 +12,21 @@ describe "Dockerfile" do
     set :docker_image, image.id
   end
   
-  it "installs the right version of Ubuntu" do
+  it "should install the right version of Ubuntu" do
     expect(os_version).to include("Ubuntu 14")
   end
 
-  ['htop','wget','node'].each do |package|
+  ['htop','wget','node', 'curl', 'nginx'].each do |package|
     it "installs package #{package}" do 
       expect(package("#{package}")).to be_installed
     end
   end
 
+  describe port(80) do
+      it { should be_listening }
+  end
+
   def os_version
-    command("lsb_release -a").stdout
+    command("cat /etc/issue").stdout
   end
 end
