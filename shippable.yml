@@ -40,6 +40,7 @@ build:
         -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies 
         -w /usr/src/app ruby:2.1 
         bundler install
+
     post_ci:
     on_success:
     on_failure:
