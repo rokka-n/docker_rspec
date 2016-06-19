@@ -11,6 +11,10 @@ matrix:
 build:
     #commands in this section run on your build machine and not inside your CI container.
     pre_ci:
+      - ls -al
+      - docker --version
+      - free -m
+      - cat /etc/lsb-release
       - >
         docker run --rm -i \
         --net host  \
