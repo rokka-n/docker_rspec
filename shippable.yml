@@ -12,7 +12,7 @@ build:
     #commands in this section run on your build machine and not inside your CI container.
     pre_ci:
       - >
-        docker run --rm -ti \
+        docker run --rm -i \
         --net host  \
         --name ruby \
         -e BUNDLE_PATH=/usr/src/app/rubies \
