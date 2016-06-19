@@ -24,7 +24,7 @@ build:
         image_name:
         image_tag:
         pull:
-        options:
+        options: "-v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR"
     #commands in this section run inside your CI container. In addition, any commands such as ls, in this section can be used to skip default processing for CI.
     ci:
       - >
@@ -40,8 +40,6 @@ build:
         -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies 
         -w /usr/src/app ruby:2.1 
         bundler install
-
-
     post_ci:
     on_success:
     on_failure:
