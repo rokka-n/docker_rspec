@@ -19,6 +19,14 @@ build:
       - uptime
       - free -m
       - cat /etc/lsb-release
+
+    pre_ci_boot:
+        image_name:
+        image_tag:
+        pull:
+        options:
+    #commands in this section run inside your CI container. In addition, any commands such as ls, in this section can be used to skip default processing for CI.
+    ci:
       - >
         docker run --rm -i 
         --net host  
@@ -33,13 +41,6 @@ build:
         -w /usr/src/app ruby:2.1 
         bundler install
 
-    pre_ci_boot:
-        image_name:
-        image_tag:
-        pull:
-        options:
-    #commands in this section run inside your CI container. In addition, any commands such as ls, in this section can be used to skip default processing for CI.
-    ci:
 
     post_ci:
     on_success:
