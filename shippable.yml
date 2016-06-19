@@ -54,7 +54,7 @@ integrations:
           on_changed:   
 
     hub:
-        - integrationName:
+        - integrationName: docker_rspec
           type:
           agent_only:
           branches:
