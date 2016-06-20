@@ -34,7 +34,7 @@ build:
     ci:
       - bundler install
       - mkdir -p shippable/testresults
-      - rspec -f RspecJunitFormatter -o shippable/testresults/results.xml 
+      - rspec -f format progress -f RspecJunitFormatter -o shippable/testresults/results.xml 
       - ls -al shippable/testresults/
 
     post_ci:
