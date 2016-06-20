@@ -5,3 +5,7 @@ gem 'rspec'
 gem 'serverspec'
 gem 'docker'
 gem 'docker-api'
+gem 'ci_reporter_rspec'
+gem 'simplecov'
+gem 'simplecov-csv'
+

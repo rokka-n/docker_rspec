@@ -5,6 +5,11 @@ language: ruby
 services:
 
 env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+
+notifications: 
+  email:
+    - roman@naumenko.ca
 
 matrix:
 
@@ -29,7 +34,8 @@ build:
     ci:
       - bundler install
       - mkdir -p shippable/testresults
-      - rspec --format documentation -o shippable/testresults/results.xml 
+      - rspec rspec -f JUnit -o shippable/testresults/results.xml 
+      - ls -al shippable/testresults/
 
     post_ci:
     on_success:
