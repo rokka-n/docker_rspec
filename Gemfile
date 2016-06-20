@@ -8,5 +8,4 @@ gem 'docker-api'
 gem 'ci_reporter_rspec'
 gem 'simplecov'
 gem 'simplecov-csv'
-gem 'junit'
-
+gem 'rspec_junit_formatter'
