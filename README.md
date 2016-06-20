@@ -1,3 +1,5 @@
+Build Status:
+[![Run Status](https://api.shippable.com/projects/57671b3e2a8192902e2440f7/badge?branch=master)](https://app.shippable.com/projects/57671b3e2a8192902e2440f7)
 
 # Test Dockerfile with rspec
 
