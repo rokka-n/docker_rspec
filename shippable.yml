@@ -23,15 +23,15 @@ build:
     pre_ci_boot:
         image_name: ruby
         image_tag: 2.1
-        pull:
+        pull: true
         options: >
-          "-v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR 
-          -e BUNDLE_PATH=/usr/src/app/rubies 
-          -e BUNDLE_BIN=/usr/src/app/rubies 
-          -e BUNDLE_APP_CONFIG=/usr/src/app/rubies
-          -e GEM_HOME=/usr/src/app/rubies
-          -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies
-          -w /usr/src/app"
+            "-v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR 
+            -e BUNDLE_PATH=/usr/src/app/rubies 
+            -e BUNDLE_BIN=/usr/src/app/rubies 
+            -e BUNDLE_APP_CONFIG=/usr/src/app/rubies
+            -e GEM_HOME=/usr/src/app/rubies
+            -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies
+            -w /usr/src/app"
     #commands in this section run inside your CI container. In addition, any commands such as ls, in this section can be used to skip default processing for CI.
     ci:
       - bundler install
