@@ -29,7 +29,7 @@ build:
     ci:
       - bundler install
       - mkdir -p shippable/testresults
-      - rspec -f JUnit -o shippable/testresults/results.xml 
+      - rspec --format documentation -o shippable/testresults/results.xml 
 
     post_ci:
     on_success:
